@@ -1,76 +1,99 @@
-# TalentFlow
+TalentFlow
 
-A modern, full-stack talent management platform built with React, TypeScript, and Vite. TalentFlow provides comprehensive tools for HR teams to manage job postings, candidate assessments, and recruitment workflows.
+A modern, full-stack talent management platform for HR teams
 
-## Features
+TalentFlow is a React + TypeScript powered application designed to streamline job postings, candidate assessments, and recruitment workflows. With a responsive UI, dynamic assessment tools, and robust local storage, it empowers HR teams to manage the entire hiring process efficiently.
 
-### Core Functionality
+🚀 Features
+🔹 Core Functionality
 
-- **Job Management**: Create, edit, and manage job postings with detailed requirements
-- **Candidate Management**: Track and manage candidate profiles and applications
-- **Assessment Builder**: Create dynamic, multi-section assessments with various question types
-- **Assessment Preview**: Real-time preview of assessments before publishing
-- **Assessment Results**: View and analyze candidate assessment responses
-- **Dashboard Analytics**: Comprehensive HR dashboard with key metrics
+Job Management – Create, edit, and manage job postings with detailed requirements.
 
-### Question Types
+Candidate Management – Track and manage candidate applications and profiles.
 
-- Single Choice
-- Multiple Choice
-- Short Text
-- Long Text
-- Numeric Input
-- File Upload
+Assessment Builder – Build multi-section assessments with multiple question types.
 
-### Advanced Features
+Assessment Preview – Real-time assessment previews before publishing.
 
-- **Conditional Logic**: Questions can be shown/hidden based on previous answers
-- **Real-time Validation**: Client-side validation with customizable rules
-- **Responsive Design**: Mobile-first design with Tailwind CSS
-- **Mock API**: Complete mock backend with MSW (Mock Service Worker)
-- **Local Storage**: Persistent data storage with IndexedDB via Dexie
+Assessment Results – View and analyze candidate responses.
 
-## Tech Stack
+HR Dashboard – Monitor hiring metrics and insights.
 
-### Frontend
+🔹 Supported Question Types
 
-- **React 19.1.1** - UI library with latest features
-- **TypeScript 5.8.3** - Type-safe JavaScript
-- **Vite 7.1.2** - Fast build tool and dev server
-- **React Router DOM 7.9.0** - Client-side routing
-- **Tailwind CSS 4.1.13** - Utility-first CSS framework
+Single Choice
 
-### State Management & Data
+Multiple Choice
 
-- **Dexie 4.2.0** - IndexedDB wrapper for local storage
-- **MSW 2.11.2** - Mock Service Worker for API mocking
-- **Axios 1.12.1** - HTTP client for API requests
+Short Text
 
-### UI Components
+Long Text
 
-- **Radix UI** - Accessible component primitives
-- **Lucide React** - Beautiful icon library
-- **React Hot Toast** - Toast notifications
-- **Class Variance Authority** - Component variant management
+Numeric Input
 
-### Development Tools
+File Upload
 
-- **ESLint** - Code linting and formatting
-- **TypeScript ESLint** - TypeScript-specific linting rules
-- **Faker.js** - Fake data generation for development
+🔹 Advanced Features
 
-## Project Structure
+Conditional Logic – Show/hide questions dynamically based on responses.
 
-```
+Real-time Validation – Customizable client-side validation rules.
+
+Responsive Design – Built mobile-first with Tailwind CSS.
+
+Mock Backend – Full API simulation using MSW.
+
+Persistent Storage – IndexedDB support via Dexie.
+
+🛠 Tech Stack
+Frontend
+
+React 19.1.1 – UI library with concurrent rendering support.
+
+TypeScript 5.8.3 – Strong typing for maintainable code.
+
+Vite 7.1.2 – Ultra-fast build tool and dev server.
+
+React Router DOM 7.9.0 – Client-side routing.
+
+Tailwind CSS 4.1.13 – Utility-first styling framework.
+
+State & Data
+
+Dexie 4.2.0 – IndexedDB wrapper for structured queries.
+
+MSW 2.11.2 – Mock Service Worker for API simulation.
+
+Axios 1.12.1 – HTTP client for API requests.
+
+UI & Components
+
+Radix UI – Accessible component primitives.
+
+Lucide React – Icon set.
+
+React Hot Toast – Notifications.
+
+Class Variance Authority – Variant-based styling.
+
+Development Tools
+
+ESLint – Code linting.
+
+TypeScript ESLint – TypeScript-specific rules.
+
+Faker.js – Test data generation.
+
+📂 Project Structure
 src/
 ├── components/           # Reusable UI components
-│   ├── common/          # Shared components (JobCard, JobSkeleton)
-│   ├── HrDashboard/     # HR-specific components
-│   ├── Jobs/            # Job-related components
-│   ├── layout/          # Layout components (Header, Footer, HrLayout)
-│   ├── sections/        # Landing page sections
-│   └── ui/              # Base UI components (Button, Card, Logo)
-├── pages/               # Page components
+│   ├── common/           # Shared (JobCard, JobSkeleton)
+│   ├── HrDashboard/      # HR-specific components
+│   ├── Jobs/             # Job-related components
+│   ├── layout/           # Layout (Header, Footer, HrLayout)
+│   ├── sections/         # Landing page sections
+│   └── ui/               # Base UI (Button, Card, Logo)
+├── pages/                # Page-level components
 │   ├── AssessmentBuilder.tsx
 │   ├── AssessmentPreview.tsx
 │   ├── AssessmentResults.tsx
@@ -82,195 +105,169 @@ src/
 │   ├── JobDetails.tsx
 │   ├── Jobs.tsx
 │   └── Landing.tsx
-├── services/            # Business logic and data layer
-│   ├── db/              # Database layer (Dexie)
-│   ├── mocks/           # Mock API handlers (MSW)
-│   └── seed/            # Seed data generation
-├── types/               # TypeScript type definitions
-├── utils/               # Utility functions
-└── main.tsx            # Application entry point
-```
+├── services/             # Business logic & data
+│   ├── db/               # IndexedDB (Dexie)
+│   ├── mocks/            # API mocks (MSW)
+│   └── seed/             # Seed data
+├── types/                # Type definitions
+├── utils/                # Utilities
+└── main.tsx              # App entry point
 
-## Quick Start
+⚡ Quick Start
+Prerequisites
 
-### Prerequisites
+Node.js 18+
 
-- Node.js 18+
-- npm or yarn
+npm or yarn
 
-### Installation
+Installation
+# Clone repository
+git clone <repository-url>
+cd talentflow
 
-1. **Clone the repository**
+# Install dependencies
+npm install
 
-   ```bash
-   git clone <repository-url>
-   cd talentflow
-   ```
+# Start dev server
+npm run dev
 
-2. **Install dependencies**
 
-   ```bash
-   npm install
-   ```
+Open browser at 👉 http://localhost:5173
 
-3. **Start development server**
-
-   ```bash
-   npm run dev
-   ```
-
-4. **Open your browser**
-   Navigate to `http://localhost:5173`
-
-### Available Scripts
-
-```bash
-npm run dev      # Start development server
-npm run build    # Build for production
+Available Scripts
+npm run dev      # Start dev server
+npm run build    # Production build
 npm run preview  # Preview production build
 npm run lint     # Run ESLint
-```
 
-## Architecture
+🏗 Architecture
+Frontend
 
-### Frontend Architecture
+Component-Based – Modular React architecture.
 
-- **Component-Based**: Modular React components with clear separation of concerns
-- **Type-Safe**: Full TypeScript coverage with strict type checking
-- **Responsive**: Mobile-first design with Tailwind CSS
-- **Accessible**: Built with accessibility in mind using Radix UI primitives
+Type-Safe – Full TypeScript support.
 
-### Data Layer
+Responsive – Mobile-first with Tailwind CSS.
 
-- **Mock Backend**: MSW provides complete API simulation
-- **Local Storage**: Dexie manages IndexedDB for persistent data
-- **Seed Data**: Faker.js generates realistic test data
-- **Type Safety**: All data operations are fully typed
+Accessible – Radix UI for a11y compliance.
 
-### Routing
+Data Layer
 
-- **Client-Side Routing**: React Router DOM handles navigation
-- **Nested Routes**: Dashboard with nested assessment routes
-- **Route Protection**: Automatic redirects for HR login flow
+Mock API – Handled via MSW.
 
-## Technical Decisions
+IndexedDB Persistence – Dexie for structured offline storage.
 
-### Why React 19?
+Seed Data – Faker.js for realistic test data.
 
-- Latest React features including improved concurrent rendering
-- Better performance with automatic batching
-- Enhanced developer experience with new hooks
+Routing
 
-### Why Vite over Create React App?
+Client-Side Routing – Powered by React Router DOM.
 
-- **Faster builds**: 10-100x faster than CRA
-- **Better HMR**: Instant hot module replacement
-- **Modern tooling**: Built-in TypeScript and CSS support
-- **Smaller bundle**: Tree-shaking and optimized builds
+Nested Routes – HR dashboard with assessment routes.
 
-### Why Dexie over localStorage?
+Route Protection – Redirects for HR flows.
 
-- **Better performance**: IndexedDB is more efficient for large datasets
-- **Structured queries**: SQL-like query capabilities
-- **Type safety**: Full TypeScript support
-- **Offline-first**: Works without network connection
+🔧 Technical Decisions
 
-### Why MSW over JSON Server?
+React 19 – Better concurrency, automatic batching, new hooks.
 
-- **Realistic mocking**: Intercepts actual HTTP requests
-- **Development**: Same code works in both environments
-- **Better debugging**: Network tab shows actual requests
-- **Flexible**: Easy to add complex business logic
+Vite – Faster builds, smaller bundles, improved DX.
 
-### Why Tailwind CSS?
+Dexie – Structured, scalable storage beyond localStorage.
 
-- **Utility-first**: Rapid prototyping and consistent design
-- **Responsive**: Mobile-first approach built-in
-- **Customizable**: Easy to extend with custom design system
-- **Performance**: Purges unused styles in production
+MSW – Realistic API mocking over static JSON.
 
-## Known Issues & Solutions
+Tailwind CSS – Utility-first, customizable, performant.
 
-### 1. SPA Routing on Vercel
+🐛 Known Issues
 
-**Issue**: 404 errors when refreshing pages on Vercel
-**Solution**: Added `vercel.json` with rewrite rules to serve `index.html` for all routes
+SPA Routing on Vercel – Fixed with vercel.json rewrites.
 
-### 2. MSW Import Errors in Production
+MSW Import Errors – Handled with dynamic import fallbacks.
 
-**Issue**: Dynamic MSW imports failing in production builds
-**Solution**: Added error handling with fallback to start app without MSW
+Hydration Errors – Fixed by removing HTML inside <option>.
 
-### 3. Hydration Errors with Option Elements
+Assessment List Refresh – Resolved by adding refresh triggers.
 
-**Issue**: React hydration errors with `<span>` elements inside `<option>` elements
-**Solution**: Removed HTML elements from option content, using only text
+☁ Deployment
 
-### 4. Assessment List Not Refreshing
+Vercel (Recommended) – Auto-detects Vite config, vercel.json handles SPA routing.
 
-**Issue**: New assessments not appearing in list after creation
-**Solution**: Added multiple refresh triggers (location change, window focus)
+Netlify – Use _redirects file (/* /index.html 200).
 
-## Deployment
+GitHub Pages – Deploy with gh-pages.
 
-### Vercel (Recommended)
+AWS S3 + CloudFront – Redirect errors to index.html.
 
-1. Connect your GitHub repository to Vercel
-2. Vercel will automatically detect Vite configuration
-3. The `vercel.json` file handles SPA routing
-4. Deploy with zero configuration
+🔮 Future Enhancements
+Planned Features
 
-### Other Platforms
+Authentication & authorization
 
-- **Netlify**: Add `_redirects` file with `/* /index.html 200`
-- **GitHub Pages**: Use `gh-pages` package with proper base path
-- **AWS S3 + CloudFront**: Configure error pages to redirect to `index.html`
+Real-time collaboration
 
-## Future Enhancements
+Advanced analytics & reporting
 
-### Planned Features
+Email notifications & integrations
 
-- [ ] User authentication and authorization
-- [ ] Real-time collaboration on assessments
-- [ ] Advanced analytics and reporting
-- [ ] Email notifications and integrations
-- [ ] Bulk operations for candidates
-- [ ] Assessment templates and library
-- [ ] API rate limiting and caching
-- [ ] Progressive Web App (PWA) features
+Bulk candidate operations
 
-### Technical Improvements
+Assessment templates & library
 
-- [ ] Add comprehensive test coverage
-- [ ] Implement error boundaries
-- [ ] Add performance monitoring
-- [ ] Optimize bundle size further
-- [ ] Add internationalization (i18n)
-- [ ] Implement dark mode theme
+API rate limiting & caching
 
-## Contributing
+PWA support
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+Technical Improvements
 
-## License
+Comprehensive test coverage
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Error boundaries
 
-## Acknowledgments
+Performance monitoring
 
-- [React](https://reactjs.org/) - The UI library
-- [Vite](https://vitejs.dev/) - The build tool
-- [Tailwind CSS](https://tailwindcss.com/) - The CSS framework
-- [MSW](https://mswjs.io/) - The API mocking library
-- [Dexie](https://dexie.org/) - The IndexedDB wrapper
-- [Radix UI](https://www.radix-ui.com/) - The component primitives
+Bundle optimization
 
----
+i18n support
 
-**TalentFlow** - Streamlining talent management for modern HR teams.
-#   T F - E N T N T  
- 
+Dark mode
+
+🤝 Contributing
+# Fork repo
+# Create feature branch
+git checkout -b feature/amazing-feature
+
+# Commit changes
+git commit -m 'Add amazing feature'
+
+# Push branch
+git push origin feature/amazing-feature
+
+# Open Pull Request
+
+📜 License
+
+This project is licensed under the MIT License – see the LICENSE
+ file.
+
+🙏 Acknowledgments
+
+React
+ – UI library
+
+Vite
+ – Build tool
+
+Tailwind CSS
+ – Styling framework
+
+MSW
+ – Mock API
+
+Dexie
+ – IndexedDB wrapper
+
+Radix UI
+ – Accessible components
+
+💡 TalentFlow – Streamlining recruitment for modern HR teams.
