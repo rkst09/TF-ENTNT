@@ -19,7 +19,6 @@ const startApp = () => {
   );
 };
 
-if (process.env.NODE_ENV === "development") {
   // console.log("Starting MSW in development mode");
   import("./services/mocks/browser")
     .then(({ worker }) => {
@@ -47,10 +46,4 @@ if (process.env.NODE_ENV === "development") {
       initializeAssessments();
       startApp();
     });
-} else {
-  // In production, initialize databases immediately and start app
-  initializeJobs();
-  initializeCandidates();
-  initializeAssessments();
-  startApp();
-}
+
