@@ -2,6 +2,8 @@
 
 A modern, full-stack talent management platform built with **React**, **TypeScript**, and **Vite**. TalentFlow provides comprehensive tools for HR teams to manage job postings, candidate assessments, and recruitment workflows with efficiency and scalability.
 
+Other UI/UX and Brand Design of the product:- https://www.figma.com/design/0i4mcs6iHnwaMrMTLqTPp4/TalentFlow?node-id=0-1&t=AXRXNsMhKwdmaCqd-1
+BrandGuidelines:- https://drive.google.com/drive/folders/1ZK-qyuTlvUIkAMjQKiS9cqkA-PfdkS3Q?usp=sharing
 ---
 
 ## Features
